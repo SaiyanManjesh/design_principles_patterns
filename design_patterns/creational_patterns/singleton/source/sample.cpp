@@ -28,7 +28,8 @@ class Singleton
 int main()
 {
     
-    /*Singleton* s1 = Singleton::get_instance();
+    /*
+    Singleton* s1 = Singleton::get_instance();
     s1->get_instance();
     s1->total_calls();
 
@@ -37,6 +38,9 @@ int main()
     s2->total_calls();
 
     WRONG
+    s1(s2);
+    s1 = s2;
+
     */  
    Singleton::get_instance().total_calls_fun();
    Singleton::get_instance().total_calls_fun();

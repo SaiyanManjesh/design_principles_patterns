@@ -1,0 +1,8 @@
+03:05:26|23:03:31|logger_app|logger_application.cpp|UIModule|N/A|INFO|button_clicked|Hello from the UI Module
+03:05:26|23:03:31|logger_app|logger_application.cpp|NETWORKModule|N/A|INFO|button_clicked|Hello from the Network Module
+03:05:26|23:03:31|logger_app|logger_application.cpp|DATABASEModule|N/A|INFO|db_query|Database connection established
+03:05:26|23:03:31|logger_app|logger_application.cpp|SystemModule|N/A|ERROR|critical_error|Test error message
+03:05:26|23:04:28|logger_app|logger_application.cpp|UIModule|N/A|INFO|button_clicked|Hello from the UI Module
+03:05:26|23:04:28|logger_app|logger_application.cpp|NETWORKModule|N/A|INFO|button_clicked|Hello from the Network Module
+03:05:26|23:04:28|logger_app|logger_application.cpp|DATABASEModule|N/A|INFO|db_query|Database connection established
+03:05:26|23:04:28|logger_app|logger_application.cpp|SystemModule|N/A|ERROR|critical_error|Test error message

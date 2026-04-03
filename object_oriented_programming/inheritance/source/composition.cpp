@@ -144,27 +144,27 @@ class Document
         std::cout<<"Document "<<doc_name<<" is created!"<<'\n';
     }
 
-    bool export_document(IExporter& exportt)
+    bool export_document(IExporter* exportt)
     {
-        if(exportt.Export())
+        if(exportt->Export())
         {
             std::cout<<"Document is exported!"<<'\n';
         }
         
     }
 
-    bool compress_document(ICompressor& compression)
+    bool compress_document(ICompressor* compression)
     {
-        if(compression.Compress())
+        if(compression->Compress())
         {
             std::cout<<"Document is Compressed!"<<'\n';
         }
         
     }
 
-    bool encrypt_document(IEncryptor& encrypt)
+    bool encrypt_document(IEncryptor* encrypt)
     {
-        if(encrypt.Encrypt())
+        if(encrypt->Encrypt())
         std::cout<<"Document is Encrypted!"<<'\n';
     }
 
@@ -177,9 +177,9 @@ int main()
     IExporter* pdf = new PDFTypeExport();
     ICompressor* zip = new ZIPType();
     IEncryptor* aes = new AESType();
-    sprint_Budget->encrypt_document(*aes);
-    sprint_Budget->compress_document(*zip);
-    sprint_Budget->export_document(*pdf);
+    sprint_Budget->encrypt_document(aes);
+    sprint_Budget->compress_document(zip);
+    sprint_Budget->export_document(pdf);
     delete sprint_Budget;
     return 0;
 }

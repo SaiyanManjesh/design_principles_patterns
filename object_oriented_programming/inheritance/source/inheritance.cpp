@@ -83,9 +83,9 @@ class CreditCardPayment : public IPayment
 class Order
 {
     public:
-    void initate_payment(IPayment& payment, int amount)
+    void initate_payment(IPayment* payment, int amount)
     {
-        if(payment.pay(amount))
+        if(payment->pay(amount))
         {
             total_money+=amount;
             std::cout<<"Money transferred successfully!!! and the total amount is: "<<total_money<<'\n';
@@ -103,8 +103,8 @@ int main()
     IPayment* Gpay = new GpayPayment();
     IPayment* CreditCard = new CreditCardPayment();
     Order* Novel = new Order();
-    Novel->initate_payment(*Gpay, 100);
-    Novel->initate_payment(*CreditCard, -200);
+    Novel->initate_payment(Gpay, 100);
+    Novel->initate_payment(CreditCard, -200);
     delete Gpay;
     delete CreditCard;
     delete Novel;
